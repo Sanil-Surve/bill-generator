@@ -162,7 +162,7 @@ function BillGenerator() {
 
   return (
     <div className="p-5 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-5">Bill Generator</h1>
+      <h1 className="text-3xl font-bold text-center mb-5">Bill Craft</h1>
 
       {/* Customer Name Input */}
       <input
