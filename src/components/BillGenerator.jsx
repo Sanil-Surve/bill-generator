@@ -111,6 +111,10 @@ function BillGenerator() {
           Download PDF
         </button>
       </div>
+
+      <footer className="mt-12 text-gray-600 text-sm">
+        © {new Date().getFullYear()} BillCraft. Simplifying Billing.
+      </footer>
     </div>
   );
 }
