@@ -23,7 +23,7 @@ function BillGenerator() {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_APP_BACKEND_URL}/api/generate-pdf`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/generate-pdf`,
         { customerName, items },
         { responseType: 'blob' }
       );
