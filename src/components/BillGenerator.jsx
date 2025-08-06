@@ -27,8 +27,10 @@ function BillGenerator() {
 
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
+      const now = new Date();
+      const formattedDate = `${String(now.getDate()).padStart(2, '0')}${String(now.getMonth() + 1).padStart(2, '0')}${now.getFullYear()}`;
       link.href = url;
-      link.setAttribute('download', `bill_${Date.now}.pdf`);
+      link.setAttribute('download', `bill_${formattedDate}.pdf`);
       document.body.appendChild(link);
       link.click();
     } catch (error) {
