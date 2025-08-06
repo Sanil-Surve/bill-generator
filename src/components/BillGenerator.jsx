@@ -20,7 +20,7 @@ function BillGenerator() {
 
     try {
       const response = await axios.post(
-        `https://billcraft.store//api/generate-pdf`,
+        `https://billcraft.store/api/generate-pdf`,
         { customerName, items },
         { responseType: 'blob' }
       );
