@@ -30,7 +30,8 @@ function BillGenerator() {
       const now = new Date();
       const formattedDate = `${String(now.getDate()).padStart(2, '0')}${String(now.getMonth() + 1).padStart(2, '0')}${now.getFullYear()}`;
       link.href = url;
-      link.setAttribute('download', `bill_${formattedDate}.pdf`);
+      const sanitizedName = customerName.replace(/\s+/g, '_');
+      link.setAttribute('download', `bill_${sanitizedName}_${formattedDate}.pdf`);
       document.body.appendChild(link);
       link.click();
     } catch (error) {
